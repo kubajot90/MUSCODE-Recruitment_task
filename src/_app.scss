@@ -1,5 +1,18 @@
+// .wrapper {
+//   @include wrapper;
+//   z-index: 100;
+//   cursor: pointer;
+//  }
+
 .app {
-  width: 100%;
-  height: 100vh;
-  background-color: red;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(51, 255, 0);
+
+  .container {
+    width: 1180px;
+
+    height: 300px;
+    background-color: blue;
+  }
 }
