@@ -16,13 +16,44 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: rgb(51, 255, 0);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #f5f8fa;
 }
 .app .container {
-  width: 1180px;
-  height: 300px;
-  background-color: blue;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  padding: 0 15px;
+  width: 100%;
+}
+@media (min-width: 1180px) {
+  .app .container {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0;
+    width: 1180px;
+  }
+}
+
+.tile {
+  background-color: pink;
+  border-radius: 20px;
+  height: 314px;
+}
+
+@media (min-width: 1180px) {
+  .products-list {
+    grid-column: 2/4;
+  }
+}
+@media (min-width: 1180px) {
+  .todo-list {
+    grid-column: 1/2;
+  }
 }/*# sourceMappingURL=style.css.map */

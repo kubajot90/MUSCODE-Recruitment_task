@@ -1,18 +1,29 @@
-// .wrapper {
-//   @include wrapper;
+// .tile {
+//   @include tile;
 //   z-index: 100;
 //   cursor: pointer;
 //  }
 
 .app {
   display: flex;
-  justify-content: center;
-  background-color: rgb(51, 255, 0);
+  align-items: center;
+  flex-direction: column;
+  background-color: $bg-color;
 
   .container {
-    width: 1180px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    padding: 0 15px;
+    width: 100%;
+  }
 
-    height: 300px;
-    background-color: blue;
+  @media (min-width: 1180px) {
+    .container {
+      grid-template-columns: 1fr 1fr 1fr;
+      padding: 0;
+      width: 1180px;
+    }
   }
 }
