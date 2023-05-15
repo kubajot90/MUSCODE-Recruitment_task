@@ -12,10 +12,24 @@
 </head>
 <body>
     <div class="app">
-        <h1>Muscode App</h1>
+        <h1 class="app__title">Muscode App</h1>
         <div class="container">
-            <section class="tile todo-list"></section>
-            <section class="tile products-list"></section>
+            <section class="tile todo">
+                <header class="todo__header">
+                    <h3 class="tile__h3">Lista todo</h3>
+                    <h3 class="tile__h3">Wykonane</h3>
+                </header>
+                <ol class="todo__list">
+                    <li class="todo__item">
+                        <input class="todo__checkbox" type="checkbox" id="checkbox" />
+                        <label class="todo__label" for="checkbox" >Przykładowe zadanie</label>
+                        <span class="checkbox-border"></span>
+                    </li>
+                </ol>
+                <button class="todo__button"><span class="plus-icon">+</span> Dodaj nowy element checklisty</button>
+
+            </section>
+            <section class="tile products"></section>
             <div class="tile product"></div>
             <div class="tile product"></div>
             <div class="tile product"></div>

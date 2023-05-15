@@ -1,0 +1,13 @@
+.products {
+}
+@media (min-width: 880px) {
+  .products {
+    grid-column: 2 / 3;
+  }
+}
+
+@media (min-width: 1180px) {
+  .products {
+    grid-column: 2 / 4;
+  }
+}

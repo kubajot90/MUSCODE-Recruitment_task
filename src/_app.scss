@@ -10,6 +10,12 @@
   flex-direction: column;
   background-color: $bg-color;
 
+  .app__title {
+    margin: 46px 0 41px 0;
+    color: $title-font-color;
+    font-weight: 500;
+  }
+
   .container {
     display: grid;
     grid-template-columns: 1fr;
@@ -17,6 +23,13 @@
     grid-row-gap: 15px;
     padding: 0 15px;
     width: 100%;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: 780px) {
+    .container {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   @media (min-width: 1180px) {
@@ -24,6 +37,7 @@
       grid-template-columns: 1fr 1fr 1fr;
       padding: 0;
       width: 1180px;
+      margin-bottom: 191px;
     }
   }
 }

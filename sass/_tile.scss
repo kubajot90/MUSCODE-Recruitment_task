@@ -1,5 +1,14 @@
 .tile {
-  background-color: pink;
-  border-radius: 20px;
-  height: 314px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 9px;
+  height: 315px;
+  padding: 25px 20px 20px 20px;
+  background-color: #fff;
+  box-shadow: 0 0 9px #d3d3d3;
+
+  .tile__h3 {
+    font-weight: 500;
+    color: $title-font-color;
+  }
 }

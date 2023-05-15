@@ -1,0 +1,72 @@
+.todo {
+  .todo__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .todo__list {
+    flex-basis: 100%;
+    overflow-y: scroll;
+
+    .todo__item {
+      display: flex;
+      align-items: center;
+      list-style-type: none;
+      border-bottom: 1px solid $border-color;
+    }
+
+    .todo__checkbox {
+      margin: 10px 8px 10px 10px;
+      min-width: 15px;
+      min-height: 15px;
+      border-radius: 50%;
+      border: 1px solid $border-color;
+      appearance: none;
+      outline: none;
+    }
+
+    .todo__checkbox:checked {
+      background-color: $checked-color;
+    }
+
+    .todo__label {
+      cursor: pointer;
+    }
+  }
+
+  .todo__button {
+    padding: 5px 10px 10px 10px;
+    margin-top: 5px;
+    border: none;
+    border-bottom: 1px solid $border-color;
+    text-align: left;
+    color: $border-color;
+
+    .plus-icon {
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+  }
+
+  .todo__button:hover {
+    background-color: $bg-color;
+  }
+
+  .todo__button,
+  .todo__checkbox {
+    cursor: pointer;
+    background-color: white;
+  }
+}
+
+@media (min-width: 780px) {
+  .todo {
+    grid-column: 1 / 2;
+  }
+}
+// @media (min-width: 1180px) {
+//   .todo {
+//     grid-column: 1 / 2;
+//   }
+// }

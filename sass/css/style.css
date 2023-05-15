@@ -25,6 +25,11 @@ body {
           flex-direction: column;
   background-color: #f5f8fa;
 }
+.app .app__title {
+  margin: 46px 0 41px 0;
+  color: #333;
+  font-weight: 500;
+}
 .app .container {
   display: grid;
   grid-template-columns: 1fr;
@@ -32,28 +37,116 @@ body {
   grid-row-gap: 15px;
   padding: 0 15px;
   width: 100%;
+  margin-bottom: 30px;
+}
+@media (min-width: 780px) {
+  .app .container {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 @media (min-width: 1180px) {
   .app .container {
     grid-template-columns: 1fr 1fr 1fr;
     padding: 0;
     width: 1180px;
+    margin-bottom: 191px;
   }
 }
 
 .tile {
-  background-color: pink;
-  border-radius: 20px;
-  height: 314px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 9px;
+  height: 315px;
+  padding: 25px 20px 20px 20px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 9px #d3d3d3;
+          box-shadow: 0 0 9px #d3d3d3;
+}
+.tile .tile__h3 {
+  font-weight: 500;
+  color: #333;
 }
 
-@media (min-width: 1180px) {
-  .products-list {
-    grid-column: 2/4;
+@media (min-width: 880px) {
+  .products {
+    grid-column: 2/3;
   }
 }
 @media (min-width: 1180px) {
-  .todo-list {
+  .products {
+    grid-column: 2/4;
+  }
+}
+.todo .todo__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+.todo .todo__list {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  overflow-y: scroll;
+}
+.todo .todo__list .todo__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+  border-bottom: 1px solid #b2b2b2;
+}
+.todo .todo__list .todo__checkbox {
+  margin: 10px 8px 10px 10px;
+  min-width: 15px;
+  min-height: 15px;
+  border-radius: 50%;
+  border: 1px solid #b2b2b2;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+}
+.todo .todo__list .todo__checkbox:checked {
+  background-color: #862583;
+}
+.todo .todo__list .todo__label {
+  cursor: pointer;
+}
+.todo .todo__button {
+  padding: 5px 10px 10px 10px;
+  margin-top: 5px;
+  border: none;
+  border-bottom: 1px solid #b2b2b2;
+  text-align: left;
+  color: #b2b2b2;
+}
+.todo .todo__button .plus-icon {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.todo .todo__button:hover {
+  background-color: #f5f8fa;
+}
+.todo .todo__button,
+.todo .todo__checkbox {
+  cursor: pointer;
+  background-color: white;
+}
+
+@media (min-width: 780px) {
+  .todo {
     grid-column: 1/2;
   }
 }/*# sourceMappingURL=style.css.map */
