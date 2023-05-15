@@ -7,8 +7,14 @@
   background-color: #fff;
   box-shadow: 0 0 9px #d3d3d3;
 
-  .tile__h3 {
-    font-weight: 500;
-    color: $title-font-color;
+  .tile__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    .tile__h3 {
+      font-weight: 500;
+      color: $title-font-color;
+    }
   }
 }

@@ -1,19 +1,7 @@
-// @import 'variables';
-// @import 'mixins';
-// @import 'typography';
-// @import 'base';
-// @import 'main';
-// @import 'navigation';
-// @import 'header__buttons';
-// @import 'footer';
-// @import 'history__panel';
-// @import 'save__panel';
-// @import 'popup';
-
 @import "variables";
-@import "mixins";
 @import "base";
 @import "../src/app";
 @import "tile";
 @import "../src/products/products";
 @import "../src/todo/todo";
+@import "../src/todo/todo__item/todo__item";

@@ -1,4 +1,35 @@
 .products {
+  .products__table {
+    border-collapse: collapse;
+    font-size: 0.8rem;
+    overflow-y: scroll;
+  }
+
+  .table__header-name {
+    width: 45%;
+  }
+
+  .products__table th {
+    font-weight: 500;
+  }
+
+  .products__table tr {
+    border-bottom: 1px solid $border-color;
+  }
+
+  .products__table tr:hover {
+    background-color: $bg-color;
+  }
+
+  .products__table td {
+  }
+
+  .products__table th,
+  .products__table td {
+    padding: 7px 16px 9px 10px;
+    text-align: left;
+    white-space: nowrap;
+  }
 }
 @media (min-width: 880px) {
   .products {

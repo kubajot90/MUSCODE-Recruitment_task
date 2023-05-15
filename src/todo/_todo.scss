@@ -1,20 +1,7 @@
 .todo {
-  .todo__header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-
   .todo__list {
     flex-basis: 100%;
     overflow-y: scroll;
-
-    .todo__item {
-      display: flex;
-      align-items: center;
-      list-style-type: none;
-      border-bottom: 1px solid $border-color;
-    }
 
     .todo__checkbox {
       margin: 10px 8px 10px 10px;
@@ -24,6 +11,8 @@
       border: 1px solid $border-color;
       appearance: none;
       outline: none;
+      cursor: pointer;
+      background-color: white;
     }
 
     .todo__checkbox:checked {
@@ -35,28 +24,13 @@
     }
   }
 
-  .todo__button {
+  .todo__input {
     padding: 5px 10px 10px 10px;
     margin-top: 5px;
+    width: 100%;
     border: none;
     border-bottom: 1px solid $border-color;
-    text-align: left;
-    color: $border-color;
-
-    .plus-icon {
-      font-weight: 700;
-      font-size: 1.1rem;
-    }
-  }
-
-  .todo__button:hover {
-    background-color: $bg-color;
-  }
-
-  .todo__button,
-  .todo__checkbox {
-    cursor: pointer;
-    background-color: white;
+    font-size: 0.9rem;
   }
 }
 

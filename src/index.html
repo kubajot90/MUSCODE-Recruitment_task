@@ -15,7 +15,7 @@
         <h1 class="app__title">Muscode App</h1>
         <div class="container">
             <section class="tile todo">
-                <header class="todo__header">
+                <header class="tile__header">
                     <h3 class="tile__h3">Lista todo</h3>
                     <h3 class="tile__h3">Wykonane</h3>
                 </header>
@@ -26,10 +26,30 @@
                         <span class="checkbox-border"></span>
                     </li>
                 </ol>
-                <button class="todo__button"><span class="plus-icon">+</span> Dodaj nowy element checklisty</button>
-
+                    <input class="todo__input" type="text" placeholder="+ Dodaj nowy element checklisty" />
             </section>
-            <section class="tile products"></section>
+            <section class="tile products">
+                <header class="tile__header">
+                    <h3 class="tile__h3">Lista Produktów</h3>
+                </header>
+                <table class="products__table">
+                    <tr>
+                        <th>#</th>
+                        <th class="table__header-name" >NAZWA</th>
+                        <th>PROMOCYJNA CENA</th>
+                        <th>CENA</th>
+                        <th>WALUTA</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>IPhone 6s Plus 16 Gb</td>
+                        <td>599</td>
+                        <td>699</td>
+                        <td>$</td>
+                    </tr>
+                      
+                </table>
+            </section>
             <div class="tile product"></div>
             <div class="tile product"></div>
             <div class="tile product"></div>

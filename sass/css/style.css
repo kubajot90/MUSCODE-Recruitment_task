@@ -68,9 +68,42 @@ body {
   -webkit-box-shadow: 0 0 9px #d3d3d3;
           box-shadow: 0 0 9px #d3d3d3;
 }
-.tile .tile__h3 {
+.tile .tile__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+.tile .tile__header .tile__h3 {
   font-weight: 500;
   color: #333;
+}
+
+.products .products__table {
+  border-collapse: collapse;
+  font-size: 0.8rem;
+  overflow-y: scroll;
+}
+.products .table__header-name {
+  width: 45%;
+}
+.products .products__table th {
+  font-weight: 500;
+}
+.products .products__table tr {
+  border-bottom: 1px solid #b2b2b2;
+}
+.products .products__table tr:hover {
+  background-color: #f5f8fa;
+}
+.products .products__table th,
+.products .products__table td {
+  padding: 7px 16px 9px 10px;
+  text-align: left;
+  white-space: nowrap;
 }
 
 @media (min-width: 880px) {
@@ -83,29 +116,10 @@ body {
     grid-column: 2/4;
   }
 }
-.todo .todo__header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 20px;
-}
 .todo .todo__list {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   overflow-y: scroll;
-}
-.todo .todo__list .todo__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  list-style-type: none;
-  border-bottom: 1px solid #b2b2b2;
 }
 .todo .todo__list .todo__checkbox {
   margin: 10px 8px 10px 10px;
@@ -117,6 +131,8 @@ body {
      -moz-appearance: none;
           appearance: none;
   outline: none;
+  cursor: pointer;
+  background-color: white;
 }
 .todo .todo__list .todo__checkbox:checked {
   background-color: #862583;
@@ -124,29 +140,28 @@ body {
 .todo .todo__list .todo__label {
   cursor: pointer;
 }
-.todo .todo__button {
+.todo .todo__input {
   padding: 5px 10px 10px 10px;
   margin-top: 5px;
+  width: 100%;
   border: none;
   border-bottom: 1px solid #b2b2b2;
-  text-align: left;
-  color: #b2b2b2;
-}
-.todo .todo__button .plus-icon {
-  font-weight: 700;
-  font-size: 1.1rem;
-}
-.todo .todo__button:hover {
-  background-color: #f5f8fa;
-}
-.todo .todo__button,
-.todo .todo__checkbox {
-  cursor: pointer;
-  background-color: white;
+  font-size: 0.9rem;
 }
 
 @media (min-width: 780px) {
   .todo {
     grid-column: 1/2;
   }
+}
+.todo__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+  border-bottom: 1px solid #b2b2b2;
+  font-size: 0.9rem;
 }/*# sourceMappingURL=style.css.map */
