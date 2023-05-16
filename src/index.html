@@ -50,17 +50,67 @@
                       
                 </table>
             </section>
+            
             <div class="tile product__tile">
                 <header class="tile__header">
                     <h3 class="tile__h3">IPhone 6s Plus 16 GB</h3>
                 </header>
-                <div class="product__img-box"></div>
+                <div class="product__img-box" style="background-image: url(../../assets/img1.png);"></div>
                 <span class="product__discount-price" >456 $</span>
                 <span class="product__price" >699 $</span>
                 <span class="product__discount-label">-22%</span>
             </div>
-            <div class="tile product__tile"></div>
-            <div class="tile product__tile"></div>
+
+            <div class="tile product__tile">
+                <header class="tile__header">
+                    <h3 class="tile__h3">IPhone 6s Plus 16 GB</h3>
+                </header>
+                <div class="product__img-box" style="background-image: url(../../assets/img2.png);"></div>
+                <span class="product__discount-price" >456 $</span>
+                <span class="product__price" >699 $</span>
+                <span class="product__discount-label">-22%</span>
+            </div>
+
+            <div class="tile product__tile">
+                <header class="tile__header">
+                    <h3 class="tile__h3">IPhone 6s Plus 16 GB</h3>
+                </header>
+                <div class="product__img-box" style="background-image: url(../../assets/img3.png);"></div>
+                <span class="product__discount-price" >456 $</span>
+                <span class="product__price" >699 $</span>
+                <span class="product__discount-label">-22%</span>
+            </div>
+            
+
+        </div>
+        <div class="modal">
+            <div class="modal__container">
+                <header class="modal__header">
+                    <h3 class="modal__h3">Edycja produktu: xxx</h3>
+                </header>
+                <div class="modal__image"></div>
+                <form class="modal__form">
+                    <label class="modal__form-label" for="name">Nazwa produktu</label>
+                    <input class="modal__form-input" type="text" name="fname">
+
+                    <label class="modal__form-label" for="price">Cena</label>
+                    <input class="modal__form-input" type="number" name="price">
+
+                    <label class="modal__form-label" for="discount-price">Promocyjna cena</label>
+                    <input class="modal__form-input" type="number" name="discount-price">
+
+                    <label  class="modal__form-label" for="currency">Waluta</label>
+                    <select class="modal__form-select" name="currency" >
+                      <option value="$">$</option>
+                      <option value="PLN">PLN</option>
+                      <option value="EUR">EUR</option>
+                    </select> 
+                    <div class="modal__buttons-container">
+                        <button class="modal__button" type="submit">Zapisz</button>
+                        <button class="modal__button" type="button">Anuluj</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
     

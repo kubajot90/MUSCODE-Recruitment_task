@@ -15,9 +15,10 @@
 
   .products__table tr {
     border-bottom: 1px solid $border-color;
+    transition: 0.2s;
   }
 
-  .products__table tr:hover {
+  .products__table tr:not(:first-child):hover {
     background-color: $bg-color;
   }
 
