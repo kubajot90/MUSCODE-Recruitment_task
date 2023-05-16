@@ -1,7 +1,46 @@
 .todo__item {
   display: flex;
   align-items: center;
+  padding-right: 10px;
   list-style-type: none;
+  text-transform: capitalize;
   border-bottom: 1px solid $border-color;
   font-size: 0.9rem;
+
+  .todo__checkbox {
+    margin: 10px 8px 10px 10px;
+    min-width: 15px;
+    min-height: 15px;
+    border-radius: 50%;
+    border: 1px solid $border-color;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    background-color: white;
+  }
+
+  .todo__checkbox:checked {
+    background-color: $purple-color;
+  }
+
+  .todo__checkbox:checked ~ .todo__label {
+    opacity: 0.6;
+  }
+
+  .todo__label {
+    padding: 5px 10px 5px 0;
+    cursor: pointer;
+  }
+
+  .check-icon {
+    width: 15px;
+    height: 15px;
+    margin-left: auto;
+    visibility: hidden;
+    opacity: 0.5;
+  }
+
+  .todo__checkbox:checked ~ .check-icon {
+    visibility: visible;
+  }
 }

@@ -17,16 +17,18 @@
             <section class="tile todo">
                 <header class="tile__header">
                     <h3 class="tile__h3">Lista todo</h3>
-                    <h3 class="tile__h3">Wykonane</h3>
+                    <h3 class="tile__h3" id="counter">Wykonane: 0</h3>
                 </header>
-                <ol class="todo__list">
-                    <li class="todo__item">
-                        <input class="todo__checkbox" type="checkbox" id="checkbox" />
-                        <label class="todo__label" for="checkbox" >Przykładowe zadanie</label>
-                        <span class="checkbox-border"></span>
-                    </li>
-                </ol>
-                    <input class="todo__input" type="text" placeholder="+ Dodaj nowy element checklisty" />
+                <ul class="todo__list" id="todo-list">
+                    <!-- <li class="todo__item">
+                            <input class="todo__checkbox" type="checkbox" id="checkbox" />
+                            <label class="todo__label" for="checkbox" >Przykładowe zadanie</label>
+                            <img class="check-icon" src="../assets/check.svg">
+                    </li> -->
+                </ul>
+                <form id="todo-form">
+                    <input class="todo__input" type="text" placeholder="+ Dodaj nowy element checklisty" id="todo-input"/>
+                </form>
             </section>
             <section class="tile products__list">
                 <header class="tile__header">
@@ -88,7 +90,7 @@
                 <header class="modal__header">
                     <h3 class="modal__h3">Edycja produktu: xxx</h3>
                 </header>
-                <div class="modal__image"></div>
+                <div class="modal__image" style="background-image: url(../../assets/img1.png)"></div>
                 <form class="modal__form">
                     <label class="modal__form-label" for="name">Nazwa produktu</label>
                     <input class="modal__form-input" type="text" name="fname">
@@ -114,6 +116,6 @@
         </div>
     </div>
     
-    <script src="src/App.js" type="module"></script>
+    <script src="./App.esm.js" type="module"></script>
 </body>
 </html>
