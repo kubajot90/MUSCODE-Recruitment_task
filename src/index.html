@@ -7,7 +7,7 @@
     <title>MUSCODE - Recruitment</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../sass/css/style.css">
 </head>
 <body>
@@ -28,7 +28,7 @@
                 </ol>
                     <input class="todo__input" type="text" placeholder="+ Dodaj nowy element checklisty" />
             </section>
-            <section class="tile products">
+            <section class="tile products__list">
                 <header class="tile__header">
                     <h3 class="tile__h3">Lista Produktów</h3>
                 </header>
@@ -42,7 +42,7 @@
                     </tr>
                     <tr>
                         <td>1</td>
-                        <td>IPhone 6s Plus 16 Gb</td>
+                        <td>IPhone 6s Plus 16 GB</td>
                         <td>599</td>
                         <td>699</td>
                         <td>$</td>
@@ -50,9 +50,17 @@
                       
                 </table>
             </section>
-            <div class="tile product"></div>
-            <div class="tile product"></div>
-            <div class="tile product"></div>
+            <div class="tile product__tile">
+                <header class="tile__header">
+                    <h3 class="tile__h3">IPhone 6s Plus 16 GB</h3>
+                </header>
+                <div class="product__img-box"></div>
+                <span class="product__discount-price" >456 $</span>
+                <span class="product__price" >699 $</span>
+                <span class="product__discount-label">-22%</span>
+            </div>
+            <div class="tile product__tile"></div>
+            <div class="tile product__tile"></div>
         </div>
     </div>
     

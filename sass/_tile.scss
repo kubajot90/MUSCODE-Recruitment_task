@@ -1,11 +1,13 @@
 .tile {
   display: flex;
+  position: relative;
   flex-direction: column;
   border-radius: 9px;
   height: 315px;
   padding: 25px 20px 20px 20px;
   background-color: #fff;
   box-shadow: 0 0 9px #d3d3d3;
+  overflow: hidden;
 
   .tile__header {
     display: flex;

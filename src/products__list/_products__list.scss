@@ -1,4 +1,4 @@
-.products {
+.products__list {
   .products__table {
     border-collapse: collapse;
     font-size: 0.8rem;
@@ -21,9 +21,6 @@
     background-color: $bg-color;
   }
 
-  .products__table td {
-  }
-
   .products__table th,
   .products__table td {
     padding: 7px 16px 9px 10px;
@@ -32,13 +29,13 @@
   }
 }
 @media (min-width: 880px) {
-  .products {
+  .products__list {
     grid-column: 2 / 3;
   }
 }
 
 @media (min-width: 1180px) {
-  .products {
+  .products__list {
     grid-column: 2 / 4;
   }
 }
