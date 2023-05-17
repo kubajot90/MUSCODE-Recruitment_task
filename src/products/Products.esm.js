@@ -9,10 +9,12 @@ export class Products {
     this.product__tile = new Product__tile((productId) =>
       this.toggleModal(productId)
     );
+
     this.modal = new Modal(
       () => this.toggleModal(),
-      (e) => this.submitEdit(e)
+      (formData) => this.submitEdit(formData)
     );
+
     this.renderProducts(products__data);
     this.modalElement = document.getElementById("modal");
     // this.addListener();
@@ -24,10 +26,17 @@ export class Products {
   //   }
 
   renderProducts(products) {
+    this.clearProducts();
+
     products.forEach((product) => {
       this.product__tile.renderTile(product);
       this.products__list.renderTableRow(product);
     });
+  }
+
+  clearProducts() {
+    this.products__list.tableBody.innerHTML = "";
+    this.product__tile.tilesContainer.innerHTML = "";
   }
 
   toggleModal(productId) {
@@ -35,8 +44,15 @@ export class Products {
     productId && this.modal.setInputsValue(productId);
   }
 
-  submitEdit(e) {
-    e.preventDefault();
-    console.log("submit");
+  submitEdit(formData) {
+    const index = this.modal.productIndex;
+    const editingProduct = products__data[index];
+    const newValue = formData;
+
+    products__data[index] = {
+      ...editingProduct,
+      ...newValue,
+    };
+    this.renderProducts(products__data);
   }
 }

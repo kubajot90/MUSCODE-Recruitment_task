@@ -1,4 +1,6 @@
 .products__list {
+  grid-area: productsList;
+  overflow-x: scroll;
   .products__table {
     border-collapse: collapse;
     font-size: 0.8rem;
@@ -27,16 +29,5 @@
     padding: 7px 16px 9px 10px;
     text-align: left;
     white-space: nowrap;
-  }
-}
-@media (min-width: 880px) {
-  .products__list {
-    grid-column: 2 / 3;
-  }
-}
-
-@media (min-width: 1180px) {
-  .products__list {
-    grid-column: 2 / 4;
   }
 }

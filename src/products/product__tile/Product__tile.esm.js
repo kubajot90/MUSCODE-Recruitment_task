@@ -1,7 +1,7 @@
 export class Product__tile {
   constructor(toggleModal) {
     this.toggleModal = toggleModal;
-    this.appContainer = document.getElementById("container");
+    this.tilesContainer = document.getElementById("product-tiles-container");
   }
 
   calculateDiscount(product) {
@@ -26,7 +26,7 @@ export class Product__tile {
   }
 
   createTile(product) {
-    const { discountPrice, price, name, image, currency, id } = product;
+    const { discountPrice, price, name, imageUrl, currency, id } = product;
 
     this.calculateDiscount(product);
 
@@ -40,7 +40,7 @@ export class Product__tile {
       <header class="tile__header">
           <h3 class="tile__h3">${name}</h3>
       </header>
-      <div class="product__img-box" style="background-image: url(${image});"></div>
+      <div class="product__img-box" style="background-image: url(${imageUrl});"></div>
       <span class="product__discount-price" >
         ${discountPrice}
       </span>
@@ -54,6 +54,6 @@ export class Product__tile {
   }
 
   renderTile(product) {
-    this.appContainer.appendChild(this.createTile(product));
+    this.tilesContainer.appendChild(this.createTile(product));
   }
 }

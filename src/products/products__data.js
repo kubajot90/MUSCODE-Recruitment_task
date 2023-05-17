@@ -4,21 +4,21 @@ export const products__data = [
     discountPrice: 649,
     price: 1000,
     currency: "$",
-    image: "../assets/img1.png",
+    imageUrl: "../assets/img1.png",
   },
   {
     name: "iPad Pro 32GB",
     discountPrice: 600,
     price: 800,
     currency: "$",
-    image: "../assets/img2.png",
+    imageUrl: "../assets/img2.png",
   },
   {
     name: "MacBook Pro",
     discountPrice: "",
     price: 800,
     currency: "PLN",
-    image: "../assets/img3.png",
+    imageUrl: "../assets/img3.png",
   },
 ];
 

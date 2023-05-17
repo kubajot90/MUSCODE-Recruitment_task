@@ -43,6 +43,7 @@ input[type=number] {
 .app .container {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-areas: "todo" "productsList" "tilesContainer";
   grid-column-gap: 15px;
   grid-row-gap: 15px;
   padding: 0 15px;
@@ -52,11 +53,13 @@ input[type=number] {
 @media (min-width: 780px) {
   .app .container {
     grid-template-columns: 1fr 1fr;
+    grid-template-areas: "todo productsList" "tilesContainer tilesContainer";
   }
 }
 @media (min-width: 1180px) {
   .app .container {
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "todo productsList productsList" "tilesContainer tilesContainer tilesContainer";
     padding: 0;
     width: 1180px;
     margin-bottom: 191px;
@@ -94,6 +97,10 @@ input[type=number] {
   color: #333;
 }
 
+.products__list {
+  grid-area: productsList;
+  overflow-x: scroll;
+}
 .products__list .products__table {
   border-collapse: collapse;
   font-size: 0.8rem;
@@ -120,16 +127,6 @@ input[type=number] {
   white-space: nowrap;
 }
 
-@media (min-width: 880px) {
-  .products__list {
-    grid-column: 2/3;
-  }
-}
-@media (min-width: 1180px) {
-  .products__list {
-    grid-column: 2/4;
-  }
-}
 .todo .todo__list {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
@@ -144,11 +141,6 @@ input[type=number] {
   font-size: 0.9rem;
 }
 
-@media (min-width: 780px) {
-  .todo {
-    grid-column: 1/2;
-  }
-}
 .todo__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -156,6 +148,7 @@ input[type=number] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  grid-area: todo;
   padding-right: 10px;
   list-style-type: none;
   text-transform: capitalize;
@@ -196,35 +189,42 @@ input[type=number] {
   visibility: visible;
 }
 
-.product__tile {
+.product__tiles-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  grid-area: tilesContainer;
+}
+.product__tiles-container .product__tile {
   height: 332px;
 }
-.product__tile .product__img-box {
+.product__tiles-container .product__tile .product__img-box {
   width: 100%;
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
-.product__tile .product__price {
+.product__tiles-container .product__tile .product__price {
   margin-bottom: 5px;
 }
-.product__tile .line-through {
+.product__tiles-container .product__tile .line-through {
   text-decoration: line-through;
   text-decoration-thickness: 1.5px;
 }
-.product__tile .product__discount-price {
+.product__tiles-container .product__tile .product__discount-price {
   margin: 14px 0 3px 0;
   color: #862583;
   font-weight: 500;
   font-size: 1.1rem;
 }
-.product__tile .product__discount-price,
-.product__tile .product__price {
+.product__tiles-container .product__tile .product__discount-price,
+.product__tiles-container .product__tile .product__price {
   -ms-flex-item-align: center;
       align-self: center;
 }
-.product__tile .product__discount-label {
+.product__tiles-container .product__tile .product__discount-label {
   position: absolute;
   top: 69px;
   right: 0;
@@ -242,6 +242,16 @@ input[type=number] {
           transform: rotate(45deg);
 }
 
+@media (min-width: 780px) {
+  .product__tiles-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1180px) {
+  .product__tiles-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
 .modal {
   position: fixed;
   width: 100vw;

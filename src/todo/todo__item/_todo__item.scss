@@ -1,6 +1,7 @@
 .todo__item {
   display: flex;
   align-items: center;
+  grid-area: todo;
   padding-right: 10px;
   list-style-type: none;
   text-transform: capitalize;
