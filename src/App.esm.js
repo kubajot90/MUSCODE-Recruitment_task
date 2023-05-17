@@ -1,13 +1,10 @@
 import { Todo } from "./todo/Todo.esm.js";
+import { Products__list } from "./products__list/Products__list.esm.js";
 
 class App {
   constructor() {
-    this.todo = new Todo({
-      counter: document.getElementById("counter"),
-      input: document.getElementById("todo-input"),
-      form: document.getElementById("todo-form"),
-      list: document.getElementById("todo-list"),
-    });
+    this.todo = new Todo();
+    this.products__list = new Products__list();
   }
 
   run() {}

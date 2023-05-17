@@ -1,27 +1,30 @@
 import { Todo__item } from "./todo__item/Todo__item.esm.js";
 
 export class Todo {
-  constructor({ counter, input, form, list }) {
-    this.counter = counter;
-    this.input = input;
-    this.form = form;
-    this.list = list;
+  constructor() {
+    this.counter = document.getElementById("counter");
+    this.input = document.getElementById("todo-input");
+    this.form = document.getElementById("todo-form");
+    this.list = document.getElementById("todo-list");
     this.counterValue = 0;
     this.setCounter = this.setCounter.bind(this);
-    this.run();
+    this.init();
   }
-  run() {
+  init() {
     this.form.addEventListener("submit", (e) => this.addItem(e));
     this.form.removeEventListener("submit", (e) => this.addItem(e));
   }
 
   addItem(e) {
     e.preventDefault();
+
     const inputValue = this.input.value;
+
     if (inputValue === "") return;
 
     const item = new Todo__item(inputValue, this.setCounter);
     this.list.appendChild(item.render());
+
     this.clearInput();
   }
 
