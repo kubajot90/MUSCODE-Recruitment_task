@@ -13,18 +13,13 @@
 <body>
     <div class="app">
         <h1 class="app__title">Muscode App</h1>
-        <div class="container">
+        <div class="container" id="container">
             <section class="tile todo">
                 <header class="tile__header">
                     <h3 class="tile__h3">Lista todo</h3>
                     <h3 class="tile__h3" id="counter">Wykonane: 0</h3>
                 </header>
                 <ul class="todo__list" id="todo-list">
-                    <!-- <li class="todo__item">
-                            <input class="todo__checkbox" type="checkbox" id="checkbox" />
-                            <label class="todo__label" for="checkbox" >Przykładowe zadanie</label>
-                            <img class="check-icon" src="../assets/check.svg">
-                    </li> -->
                 </ul>
                 <form id="todo-form">
                     <input class="todo__input" type="text" placeholder="+ Dodaj nowy element checklisty" id="todo-input"/>
@@ -44,21 +39,11 @@
                             <th>WALUTA</th>
                         </tr>
                     </thead>
-                    <tbody id="table-body">
-
-                    </tbody>
-                    <!-- <tr>
-                        <td>1</td>
-                        <td>IPhone 6s Plus 16 GB</td>
-                        <td>599</td>
-                        <td>699</td>
-                        <td>$</td>
-                    </tr> -->
-                      
+                    <tbody id="table-body"></tbody>
                 </table>
             </section>
             
-            <div class="tile product__tile">
+            <!-- <div class="tile product__tile">
                 <header class="tile__header">
                     <h3 class="tile__h3">IPhone 6s Plus 16 GB</h3>
                 </header>
@@ -86,7 +71,7 @@
                 <span class="product__discount-price" >456 $</span>
                 <span class="product__price" >699 $</span>
                 <span class="product__discount-label">-22%</span>
-            </div>
+            </div> -->
             
 
         </div>

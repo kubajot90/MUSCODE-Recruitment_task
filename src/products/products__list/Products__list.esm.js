@@ -1,10 +1,7 @@
-import { products__data } from "../products__data.js";
-
 export class Products__list {
   constructor() {
     this.tableBody = document.getElementById("table-body");
     this.productsCounter = 0;
-    this.renderProducts(products__data);
   }
 
   createTableRow(product) {
@@ -24,11 +21,12 @@ export class Products__list {
     return row;
   }
 
-  renderProducts(products) {
-    products.forEach((product) => {
-      this.createTableRow(product);
-    });
+  // renderProducts(products) {
+  //   products.forEach((product) => {
+  //     this.createTableRow(product);
+  //   });
+  // }
+  renderTableRow(product) {
+    this.createTableRow(product);
   }
-
-  editProduct() {}
 }
