@@ -21,11 +21,6 @@ export class Products__list {
     return row;
   }
 
-  // renderProducts(products) {
-  //   products.forEach((product) => {
-  //     this.createTableRow(product);
-  //   });
-  // }
   renderTableRow(product) {
     this.createTableRow(product);
   }

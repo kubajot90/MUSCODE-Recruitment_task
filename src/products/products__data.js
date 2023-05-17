@@ -15,9 +15,18 @@ export const products__data = [
   },
   {
     name: "MacBook Pro",
-    discountPrice: null,
+    discountPrice: "",
     price: 800,
     currency: "PLN",
     image: "../assets/img3.png",
   },
 ];
+
+const generateIds = () => {
+  products__data.forEach((product) => {
+    const id = Math.random();
+    product.id = `${id}`;
+  });
+};
+
+generateIds();

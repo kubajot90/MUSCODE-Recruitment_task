@@ -211,6 +211,7 @@ input[type=number] {
 }
 .product__tile .line-through {
   text-decoration: line-through;
+  text-decoration-thickness: 1.5px;
 }
 .product__tile .product__discount-price {
   margin: 14px 0 3px 0;
@@ -249,7 +250,10 @@ input[type=number] {
   z-index: 99;
   -webkit-box-shadow: 0 0 9px #d3d3d3;
           box-shadow: 0 0 9px #d3d3d3;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   display: none;
+  opacity: 0;
 }
 .modal .modal__container {
   display: -webkit-box;
@@ -344,4 +348,22 @@ input[type=number] {
   background-color: #862583;
   border: 1px solid #862583;
   color: white;
+}
+
+.show__modal {
+  display: block;
+  -webkit-animation: show__modal 0.5s forwards;
+          animation: show__modal 0.5s forwards;
+}
+
+@-webkit-keyframes show__modal {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes show__modal {
+  100% {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=style.css.map */

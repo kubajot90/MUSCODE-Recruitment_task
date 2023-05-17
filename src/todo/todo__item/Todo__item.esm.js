@@ -8,7 +8,6 @@ export class Todo__item {
 
   render() {
     const item = document.createElement("li");
-
     item.setAttribute("class", "todo__item");
 
     item.innerHTML = `
