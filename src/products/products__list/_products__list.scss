@@ -20,7 +20,7 @@
     transition: 0.2s;
   }
 
-  .products__table tr:not(:first-child):hover {
+  .table__body tr:hover {
     background-color: $bg-color;
   }
 

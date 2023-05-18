@@ -16,7 +16,6 @@ export class Todo__item {
         ${this.value}
         </label>
         <img class="check-icon" src="./assets/check.svg">
-        
     `;
 
     this.addCheckboxListener(item, this.randomId);
