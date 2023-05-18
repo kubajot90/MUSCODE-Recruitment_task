@@ -29,6 +29,7 @@ export class Products {
   }
 
   clearProducts() {
+    this.products__list.productsCounter = 0;
     this.products__list.tableBody.innerHTML = "";
     this.product__tile.tilesContainer.innerHTML = "";
   }
