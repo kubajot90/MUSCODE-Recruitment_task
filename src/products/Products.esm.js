@@ -17,13 +17,7 @@ export class Products {
 
     this.renderProducts(products__data);
     this.modalElement = document.getElementById("modal");
-    // this.addListener();
   }
-
-  //   addListener() {
-  //     this.modalElement.addEventListener("click", () => this.toggleModal());
-  //     this.modalElement.removeEventListener("click", () => this.toggleModal());
-  //   }
 
   renderProducts(products) {
     this.clearProducts();

@@ -15,7 +15,7 @@ export class Todo__item {
         <label class="todo__label" for="${this.randomId}" >
         ${this.value}
         </label>
-        <img class="check-icon" src="../assets/check.svg">
+        <img class="check-icon" src="./assets/check.svg">
         
     `;
 
